@@ -9,6 +9,7 @@ def lambda_handler(event, context):
     table = dynamodb.Table('MessagesTable')
     
     # Handle POST request
+    # single space
     if event['httpMethod'] == 'POST':
         data = json.loads(event['body'])
         messageId = str(uuid.uuid4())
